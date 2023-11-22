@@ -2,16 +2,19 @@
 #include "digitSegments.h";
 
 Display::Display(gpio_num_t a, gpio_num_t b, gpio_num_t c, gpio_num_t d, gpio_num_t e, gpio_num_t f, gpio_num_t g){
-    segments[0] = a;
-    segments[1] = b;
-    segments[2] = c;
-    segments[3] = d;
-    segments[4] = e;
-    segments[5] = f;
-    segments[6] = g;
+    // segments[0] = a;
+    // segments[1] = b;
+    // segments[2] = c;
+    // segments[3] = d;
+    // segments[4] = e;
+    // segments[5] = f;
+    // segments[6] = g;
+    gpio_num_t segmentPins[7] = {a, b, c, d, e, f, g};
 
     for (int i = 0; i < 7; i++)
     {
+        segments[i] = segmentPins[i];
+        
         gpio_reset_pin(segments[i]);
         gpio_set_direction(segments[i], GPIO_MODE_OUTPUT);
     }
