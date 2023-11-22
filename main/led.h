@@ -13,4 +13,5 @@ class Led{
 
   private:
     gpio_num_t m_pin;
-}
+    static const char *TAG;
+};

@@ -2,9 +2,9 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "display/display.h"
-#include "led/led.h"
-#include "button/button.h"
+#include "headers/display.h"
+#include "headers/led.h"
+#include "headers/button.h"
 #include <stdio.h>
 #include "driver/gpio.h"
 #include "esp_log.h"

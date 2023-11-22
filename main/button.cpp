@@ -16,5 +16,5 @@ Button::~Button(){
 }
 
 bool Button::isPressed(){
-  return (gpio_set_level(m_pin) == 0);
+  return (gpio_get_level(m_pin) == 0);
 }

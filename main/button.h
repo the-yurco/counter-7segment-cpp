@@ -7,8 +7,9 @@ class Button{
     Button(gpio_num_t pin);
     ~Button();
 
-    bool is isPressed();
+    bool isPressed();
 
   private:
     gpio_num_t m_pin;
-}
+    static const char *TAG;
+};
